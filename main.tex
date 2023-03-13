@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Alexander Ulanov}}\\
+	Saint Petersburg $\cdot$ alexander.ulanov@gmail.com $\cdot$ +79043334469 $\cdot$ \url{https://www.linkedin.com/in/alexanderulanov/} $\cdot$ \url{https://t.me/aulanov}\\
+\end{center}
+
+%==== Experience ====%
+Software developer with 15 years of experience, team lead with 7 years of experience. Hands-on experience in FX volatility derivatives pricing. C\#, Kotlin, C++ with focus on quality, strong analytical skills.
+
+\vspace{3mm}
+%==== Experience ====%
+\header{Employment History}
+\vspace{1mm}
+
+\textbf{Deutsche Bank} \quad \url{https://www.db.com/} \hfill Saint Petersburg\\
+\textit{Software Developer Engineer} \hfill June 2017 - Present\\
+\vspace{1mm}
+Project: Automatic FX volatility calibration to broker, exchange and internal data. Data capturing, calibration and distribution system, streaming volatility for automated trading in Autobahn FX Options \\
+\vspace{1mm}
+Project: Viewing and managing electronic liquidity in the FX option market \\
+\vspace{1mm}
+Responsibilities:
+\begin{itemize} \itemsep 1pt
+	\item Developed and designed FX options volatility marking system and it\textquotesingle{}s subsystems including UI tools (C\#, Kotlin, C++)
+    \item Direct communication with trading desk (business), including requirements analysis, support
+    \item Maintained and onboarded new option volatility sources (CME/ETF/etc.)
+    \item Managed team of 4 members
+\end{itemize}
+Key achievements:
+\begin{itemize} \itemsep 1pt
+	\item Developed unified volatility model in pricing flows used in FX derivatives desk
+    \item Optimized pricing engine which led up to 4x performance
+    \item Designed and implemented microservice architecture for various new services.
+\end{itemize}
+Technologies: C\# $\cdot$ Kotlin $\cdot$ C++ $\cdot$ WinForms $\cdot$ WPF $\cdot$ Spring $\cdot$ Kafka $\cdot$ Solace $\cdot$ Consul $\cdot$ Oracle $\cdot$ kdb+ $\cdot$ ClickHouse \\
+\vspace{3mm}
+\textbf{Kappa Engineering} \quad \url{https://www.kappaeng.com} \hfill UK, London\\
+\textit{Lead Software Engineer} \hfill Mar 2012 - June 2017\\
+\vspace{1mm}
+Greenfield project: Application for analyzing outcomes from hundreds of multi-fractured horizontal wells. Designed architecture and core components. Managed team of 3 members. \\
+Technologies: C\# $\cdot$ WinForms $\cdot$ SQL Server $\cdot$ Prism \\
+\vspace{3mm}
+\textbf{Devexperts} \quad \url{https://devexperts.com} \hfill Saint Petersburg\\
+\textit{Software Developer} \hfill Nov 2009 - Jan 2012\\
+\vspace{1mm}
+Project: Real-time administrative management tool for the FX market. The system tracks a thousand updates per second, displaying results in tables / charts, providing comprehensive monitoring and ability to manage players on the market in real-time. \\
+Technologies: C\# $\cdot$ WinForms $\cdot$ Oracle $\cdot$ SQLite $\cdot$ Prism $\cdot$ Rx  \\
+\vspace{3mm}
+\textbf{Saint Petersburg State University} \hfill Saint Petersburg\\
+\textit{Senior Lecture}, Part time, Remote \hfill Sep 2009 - Present\\
+
+\vspace{3mm}
+\textbf{Zed} \quad \url{https://www.zed.com} \hfill Saint Petersburg\\
+\textit{Software Developer} \hfill Aug 2007 - Nov 2009\\
+\vspace{1mm}
+Project: Web-based application for managing the billing system of the company's SMS services. Created the communication protocol between company and mobile operators like Tele2, MTS, Beeline, and Megafon. \\
+Technologies: C\# $\cdot$ Java $\cdot$ ASP.NET $\cdot$ Oracle $\cdot$ SQL Server \\
+\vspace{3mm}
+%==== Education ====%
+\header{Education}
+\textbf{World Quant University} \quad \url{https://www.wqu.edu} \\
+MS Financial Engineering \textit{GPA: 96\%} \hfill Jan 2020 - June 2022\\
+Thesis: Practical aspects of American option pricing Implementation \\
+\vspace{2mm}
+\textbf{Saint Petersburg State University} \quad \url{https://apmath.spbu.ru} \\
+Specialist degree in Mathematics \textit{GPA: 4.86 of 5, magna cum laude} \hfill Sep 2004 - Jun 2009\\
+Thesis: Patent search with feedback from users \\
+\vspace{2mm}
+
+%==== Hobbies ====%
+\header{Hobbies}
+	Swimmer, triathlete, fond of folk music\\
+\vspace{2mm} 
+\end{document}
